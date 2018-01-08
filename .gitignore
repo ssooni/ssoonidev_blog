@@ -22,3 +22,11 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+
+target/
