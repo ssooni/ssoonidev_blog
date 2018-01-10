@@ -9,11 +9,6 @@ import org.apache.ibatis.annotations.Select;
 
 import com.example.domain.UserDomain;
 
-/***
- * 
- * @author ChanHoSon
- *
- */
 @Mapper
 public interface UserDAO {
 	

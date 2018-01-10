@@ -3,6 +3,7 @@ package com.example.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import com.example.dao.ClientRepo;
@@ -14,7 +15,7 @@ public class ClientServiceImpl implements ClientService{
 
 	@Autowired
 	private ClientRepo clientRepo;
-	
+		
 	@Override
 	public ClientDomain findOnebyUserid(int userId) {
 		return clientRepo.findOneByUserId(userId);
@@ -24,4 +25,5 @@ public class ClientServiceImpl implements ClientService{
 	public List<ClientDomain> findAll() {
 		return clientRepo.findAll();
 	}
+	
 }
