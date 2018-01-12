@@ -1,16 +1,15 @@
 package com.example.domain;
 
 public class BoardDomain {
-	
-	private int userId;
+	private int bno;
 	private String userName;
 	private String contents;
 	
-	public int getUserId() {
-		return userId;
+	public int getBno() {
+		return bno;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setBno(int bno) {
+		this.bno = bno;
 	}
 	public String getUserName() {
 		return userName;

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
 
 <mapper namespace="com.example.dao.BoardMapper"> 
-	<select id="findByUserId2" parameterType="Integer" resultType="BoardDomain"> 
-		SELECT * FROM borad WHERE userId = #{userId} 
+	<select id="findByBno2" parameterType="Integer" resultType="BoardDomain"> 
+		SELECT * FROM board WHERE bno = #{bno} 
 	</select> 
 </mapper>

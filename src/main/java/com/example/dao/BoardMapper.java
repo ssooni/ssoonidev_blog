@@ -14,17 +14,17 @@ import com.example.domain.BoardDomain;
 @Mapper
 public interface BoardMapper {
 	
-	@Select("SELECT * FROM board WHERE userId = #{userId}")
-	public List<BoardDomain> findByUserId(@Param("userId") int userId);
+	@Select("SELECT * FROM board WHERE bno = #{bno}")
+	public List<BoardDomain> findByBno(@Param("bno") int bno);
 	
-	@Insert("INSERT INTO board VALUES(#{userId}, #{userName}, #{contents})")
+	@Insert("INSERT INTO board(userName, contents) VALUES(#{userName}, #{contents})")
 	public void insert(BoardDomain board);
 	
-	@Update("UPDATE board SET contents=#{content} where userId=#{userId}")
+	@Update("UPDATE board SET contents=#{contents} where bno=#{bno}")
 	public void update(BoardDomain board);
 	
-	@Delete("DELETE FROM board where userId=#{userId}")
-	public void delete(@Param("userId") int userId);
+	@Delete("DELETE FROM board where bno=#{bno}")
+	public void delete(@Param("bno") int bno);
 
-	public List<BoardDomain> findByUserId2(int userId);
+	public List<BoardDomain> findByBno2(int bno);
 }
