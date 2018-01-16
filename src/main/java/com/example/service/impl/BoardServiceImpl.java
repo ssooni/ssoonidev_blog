@@ -15,7 +15,12 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Autowired
 	BoardMapper boardMapper;
-	
+		
+	@Override
+	public List<BoardDomain> findAll() {
+		return boardMapper.findAll();
+	}
+
 	@Override
 	public List<BoardDomain> findByBno(int bno) {
 		return boardMapper.findByBno(bno);

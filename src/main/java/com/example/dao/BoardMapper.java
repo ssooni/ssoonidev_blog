@@ -14,6 +14,12 @@ import com.example.domain.BoardDomain;
 @Mapper
 public interface BoardMapper {
 	
+	@Select("SELECT * FROM board")
+	public List<BoardDomain> findAll();
+	
+	@Select("SELECT * FROM board WHERE userName=#{userName}")
+	public List<BoardDomain> findByUserName(@Param("userName") String userName);
+	
 	@Select("SELECT * FROM board WHERE bno = #{bno}")
 	public List<BoardDomain> findByBno(@Param("bno") int bno);
 	

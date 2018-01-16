@@ -7,14 +7,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" src="js/board/modal.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/modal.css">
 
 <title>Test Read Data</title>
 </head>
 <body>
 	<div class="container">
-		<h2>Board</h2>
+		<jsp:include page="../include/header.jsp" />
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -26,21 +35,25 @@
 			</thead>
 			<tbody>
 				<c:forEach var="board" items="${boardList}">
-					<tr>
+					<tr id="tr${board.bno}">
 						<td>${board.bno}</td>
 						<td><a href="#">${board.contents}</a></td>
 						<td>${board.userName}</td>
 						<td>
 							<div class="btn-group">
-								<button class="btn btn-xs btn-warning">수정</button>
-								<button class="btn btn-xs btn-danger">삭제</button>														
-							</div>						
+								<button name="modify" value="${board.bno}"
+									class="btn btn-xs btn-warning">수정</button>
+								<button name="delete" value="${board.bno}"
+									class="btn btn-xs btn-danger">삭제</button>
+							</div>
 						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
-		<button>새 글 쓰기</button>
+		<jsp:include page="../include/modal.jsp" />
+		<button id="createBtn" type="button" class="btn btn-info btn-sm"
+			data-toggle="modal">새 글 쓰기</button>
 	</div>
 </body>
 </html>

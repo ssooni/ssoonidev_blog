@@ -1,5 +1,8 @@
 package com.example.domain;
 
+import lombok.ToString;
+
+@ToString
 public class BoardDomain {
 	private int bno;
 	private String userName;

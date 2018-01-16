@@ -6,6 +6,7 @@ import com.example.domain.BoardDomain;
 
 public interface BoardService {
 
+	public List<BoardDomain> findAll();
 	public List<BoardDomain> findByBno(int bnp);
 	public List<BoardDomain> findByBno2(int bno);
 	public void insert(BoardDomain board);
