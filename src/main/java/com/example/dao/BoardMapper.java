@@ -21,7 +21,7 @@ public interface BoardMapper {
 	public List<BoardDomain> findByUserName(@Param("userName") String userName);
 	
 	@Select("SELECT * FROM board WHERE bno = #{bno}")
-	public List<BoardDomain> findByBno(@Param("bno") int bno);
+	public BoardDomain findByBno(@Param("bno") int bno);
 	
 	@Insert("INSERT INTO board(userName, contents) VALUES(#{userName}, #{contents})")
 	public void insert(BoardDomain board);

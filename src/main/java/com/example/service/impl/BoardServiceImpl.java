@@ -22,7 +22,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List<BoardDomain> findByBno(int bno) {
+	public BoardDomain findByBno(int bno) {
 		return boardMapper.findByBno(bno);
 	}
 		

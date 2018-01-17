@@ -16,10 +16,10 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-<script type="text/javascript" src="js/board/modal.js"></script>
+<script type="text/javascript" src="/js/board/modal.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/modal.css">
 
-<title>Test Read Data</title>
+<title>게시판</title>
 </head>
 <body>
 	<div class="container">
@@ -37,7 +37,7 @@
 				<c:forEach var="board" items="${boardList}">
 					<tr id="tr${board.bno}">
 						<td>${board.bno}</td>
-						<td><a href="#">${board.contents}</a></td>
+						<td><a href="/board/${board.bno}">${board.contents}</a></td>
 						<td>${board.userName}</td>
 						<td>
 							<div class="btn-group">

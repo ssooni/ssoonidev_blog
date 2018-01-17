@@ -19,7 +19,7 @@ $(document).ready(function(){
 		type = 'PUT';
 		bno = this.value;
 
-		// TODO content 담기
+		// content 담기
 		var row = $(this).parent().parent().parent();
 		var tr = row.children();
 		

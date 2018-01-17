@@ -48,22 +48,18 @@ public class BoardServiceTest {
 		board.setBno(1);
 		board.setUserName("ssooni");
 		board.setContents("Welcome!!!!");
-
-		List<BoardDomain> list = new ArrayList<>();
-		list.add(board);
-
-		Mockito.when(boardService.findByBno(1)).thenReturn(list);
+		
+		Mockito.when(boardService.findByBno(1)).thenReturn(board);
 	}
 	
 	@Test
 	public void testFindByUserId() {
 		logger.info("#### testFindByUserId() ####");
-		List<BoardDomain> list = boardService.findByBno(1);
-		logger.info("list size : " + list.size()); 
-		logger.info("list.get(0).getUserName() : " + list.get(0).getUserName()); 
-		logger.info("list.get(0).getContents() : " + list.get(0).getContents()); 
+		BoardDomain board = boardService.findByBno(1);
+		logger.info("list.get(0).getUserName() : " + board.getUserName()); 
+		logger.info("list.get(0).getContents() : " + board.getContents()); 
 
-		assertThat(list.get(0).getUserName()).isEqualTo("ssooni");
+		assertThat(board.getUserName()).isEqualTo("ssooni");
 	}
 
 }
