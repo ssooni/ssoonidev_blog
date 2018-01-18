@@ -5,20 +5,21 @@
 * Contact Me > ssooni526@gmail.com
 
 
-### 1. MySQL with MyBatis
-#### 1-1. 아주 간단한 게시판 만들기
+## 1. MySQL with MyBatis
+### 1-1. 아주 간단한 게시판 만들기
 * 게시물 CRUD 기능 구현
 * Bootstrap Modal / Table 사용해보기
 * 아주 간단한 jQuery + JSP 
 
 --------------
-### 2. Mongo DB + Redis Cache Layer (블로그 작성중)
-#### 2-1. REST API 구현
+## 2. Mongo DB + Redis Cache Layer (블로그 작성중)
+
+### 2-1. REST API 구현
 * MongoDB의 Data 가져오기 
 * Swagger-UI 사용 : API Document 작성하기
 * Redis Cache Layer 
 
-#### 2-2. 게시물 Reply 구현
+### 2-2. 게시물 Reply 구현
 * Ajax 사용 : 부분 reload 구현
 * 약간의 javascript /  Bootstrap
 
