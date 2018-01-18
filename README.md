@@ -11,6 +11,7 @@
 * Bootstrap Modal / Table 사용해보기
 * 아주 간단한 jQuery + JSP 
 
+--------------
 ### 2. Mongo DB + Redis Cache Layer (블로그 작성중)
 #### 2-1. REST API 구현
 * MongoDB의 Data 가져오기 
