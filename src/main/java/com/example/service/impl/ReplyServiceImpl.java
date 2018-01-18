@@ -34,6 +34,7 @@ public class ReplyServiceImpl implements ReplyService{
 	@Cacheable(value="replyCache", key="#bno")
 	@Override
 	public List<ReplyDomain> findbyBno(int bno) {
+		logger.info("Go Mongo");
 		return replyRepo.findByBno(bno);
 	}
 	
@@ -45,7 +46,7 @@ public class ReplyServiceImpl implements ReplyService{
 		return replyRepo.findByBno(bno);
 	}
 
-	@CachePut(value = "replyCache", key="#result.id")
+	@CachePut(value = "replyCache", key="#reply.bno")
 	@Override
 	public List<ReplyDomain> update(ReplyDomain reply) {
 		int bno = reply.getBno();

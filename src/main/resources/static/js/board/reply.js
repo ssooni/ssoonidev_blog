@@ -1,5 +1,3 @@
-var next = 0;	
-
 $(document).ready(function(){
 	var bno = Number(window.location.pathname.split("/")[2]);
 	var resultArray = [];
@@ -13,9 +11,7 @@ $(document).ready(function(){
 			renewTable(result, bno);
 		}	
 	});
-	
-	next = length + 1;	
-	
+		
 	// 새 댓글 쓰기 버튼 클릭
 	$("#createBtn").click(function(){
 		action='create';
@@ -48,7 +44,6 @@ $(document).ready(function(){
 				$("#userName").val("");
 				$("#contents").val("");
 				$("#myModal").modal('hide');
-				next = length + 1;	
 			}			
 		});
 	});

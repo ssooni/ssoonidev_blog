@@ -24,7 +24,9 @@ public class RedisConfig {
 	
 	@Bean
 	public CacheManager cacheManager(RedisTemplate redisTemplete) {
-		return new RedisCacheManager(redisTemplete);
+		RedisCacheManager redisCacheManger = new RedisCacheManager(redisTemplete);
+		redisCacheManger.setDefaultExpiration(10000L);
+		return redisCacheManger;
 	}
 	
 	@Bean
@@ -32,6 +34,7 @@ public class RedisConfig {
 		JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
 		jedisConnectionFactory.setHostName(redisHost);
 		jedisConnectionFactory.setPort(redisPort);
+		
 		return jedisConnectionFactory;
 	}
 	
@@ -40,6 +43,7 @@ public class RedisConfig {
 	public RedisTemplate<String, List<ReplyDomain>> redisTemplate(RedisConnectionFactory redisCF){
 		RedisTemplate<String, List<ReplyDomain>> redisTemplate = new RedisTemplate<>();
 		redisTemplate.setConnectionFactory(redisCF);
+        redisTemplate.afterPropertiesSet();
 		return redisTemplate;
 	}
 }
